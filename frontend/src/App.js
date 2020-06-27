@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
+import Main from './components/Main';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Header />
       <hr/>
       <NavBar />
-      <h1>[Landing]</h1>
+      <Main />
       <hr/>
       <Footer />
     </div>

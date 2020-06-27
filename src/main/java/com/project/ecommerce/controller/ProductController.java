@@ -25,6 +25,11 @@ public class ProductController {
         return productService.getAllProducts();
     }
 
+    @GetMapping("/{id}")
+    public Product getProductById(@PathVariable(value = "id") int id) {
+        return productService.getProductById(id);
+    }
+
     @PostMapping("/addProduct")
     @ResponseStatus(HttpStatus.CREATED)
     public String addNewProduct(@RequestBody Product product) {

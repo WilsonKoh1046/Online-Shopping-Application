@@ -1,0 +1,38 @@
+.products-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .products-section {
+        display: block;
+    }
+}
+
+.pagination {
+    list-style-type: none;
+}
+
+.pagination > li {
+    display: inline-block;
+    color: black;
+    padding: 20px;
+}
+
+.pagination > li :hover {
+    background-color: gold;
+}
+
+.active > a {
+    color: gold;
+}
+
+.page-link {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}

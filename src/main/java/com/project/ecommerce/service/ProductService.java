@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
 
 @Service
 public class ProductService {
@@ -22,6 +24,14 @@ public class ProductService {
         List<Product> list_of_product = new ArrayList<>();
         productRepository.findAll().forEach(list_of_product::add);
         return list_of_product;
+    }
+
+    public Product getProductById(int id) {
+        Optional<Product> product = productRepository.findById(id);
+        if (!product.isPresent()) {
+            throw new NoSuchElementException();
+        }
+        return product.get();
     }
 
     public void addNewProduct(Product product) {
