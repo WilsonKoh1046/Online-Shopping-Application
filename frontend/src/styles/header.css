@@ -1,3 +1,8 @@
 .header-title {
     text-align: center;
 }
+
+.header-title > a {
+    text-decoration: none;
+    color: black;
+}
